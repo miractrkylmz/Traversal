@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concrete
+@model List<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>Bize Ulaşın Mesajları</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Gönderen</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+        <th>Mesajı Aç</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var item in Model){
+        {
+            count += 1;
+        }
+        <tr>
+            <th>@count</th>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.MessageBody</td>
+            <td>@item.MessageDate.ToShortDateString()</td>
+            <td><a href="#" class="btn btn-outline-dark">Mesajı Aç</a></td>
+            @if(item.MessageStatus==true){
+                <td><a href="/Admin/ContactUs/Passivate/@item.ContactUsID" class="btn btn-outline-warning">Pasif Yap</a></td>
+            }else{
+                <td><a href="/Admin/ContactUs/Activate/@item.ContactUsID" class="btn btn-outline-success">Aktif Yap</a></td>
+            }
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@await Component.InvokeAsync("_DashboardHeader")
+
+<body>
+    <!-- Content -->
+        <div class="row">
+
+            @await Component.InvokeAsync("_DashboardBanner")
+
+            @await Component.InvokeAsync("_StatisticCard1")
+
+            @await Component.InvokeAsync("_TotalRevenue")
+
+            @await Component.InvokeAsync("_StatisticCard2")
+
+        </div>
+        <div class="row">
+
+            @await Component.InvokeAsync("_DestinationStatistic")
+
+            @await Component.InvokeAsync("_DestinationStatistic2")
+
+            @await Component.InvokeAsync("_GuideList1")
+
+        </div>
+    <!-- / Content -->
+    <div class="content-backdrop fade"></div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="/Traversal-AdminTemasi/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="/Traversal-AdminTemasi/assets/vendor/libs/popper/popper.js"></script>
+    <script src="/Traversal-AdminTemasi/assets/vendor/js/bootstrap.js"></script>
+    <script src="/Traversal-AdminTemasi/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="/Traversal-AdminTemasi/assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="/Traversal-AdminTemasi/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="/Traversal-AdminTemasi/assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="/Traversal-AdminTemasi/assets/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>

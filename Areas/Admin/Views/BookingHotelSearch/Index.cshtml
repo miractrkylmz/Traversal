@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Traversal.Areas.Admin.Models.BookingHotelSearchViewModel.Result>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>BookingOtelAPI - Şehire Göre Otel Listeleme</h1>
+
+<form method="post" asp-action="GetCityID">
+    <label>Şehir İsmi:</label>
+    <input type="text" name="cityName" class="form-control" placeholder="Şehir Giriniz">
+    <button class="btn btn-primary mt-2">Otel Ara</button>
+</form>
+<br />
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<h3>Otel Listesi</h3>
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Otel Adı</th>
+        <th>Otel Puanı</th>
+        <th>Otel Değerlendirmesi</th>
+    </tr>
+    @{
+        int count = 0;
+    }
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.hotel_name</td>
+            <td>@item.review_score</td>
+            <td>
+                @switch (item.review_score_word)
+                {
+                    case "Very good":
+                        @("Çok iyi")
+                        break;
+                    case "Good":
+                        @("İyi")
+                        break;
+                    case "Fabulous":
+                        @("Şahane")
+                        break;
+                    case "Superb":
+                        @("Süper")
+                        break;
+                    case "Exceptional":
+                        @("Olağanüstü")
+                        break;
+                    default:
+                        @("Değerlendirme yok")
+                        break;
+                }
+            </td>
+        </tr>
+    }
+</table>
