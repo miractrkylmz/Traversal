@@ -98,6 +98,14 @@ StyleCopReport.xml
 *.svclog
 *.scc
 
+#Manuel Ignores
+bin/
+obj/
+.vs/
+*.user
+appsettings.json
+Migrations/
+
 # Chutzpah Test files
 _Chutzpah*
 
