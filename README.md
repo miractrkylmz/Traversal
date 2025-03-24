@@ -111,6 +111,6 @@ Bu proje, backend geliştirme sürecinde büyük bir adım attığım ve birçok
 
 📸 Proje Resimleri
 
-(Buraya proje ekran görüntülerini ekleyebilirsin!)
+(Ekran Görüntüleri Eklenecek)
 
 Bu proje, backend geliştirme sürecinde benim için büyük bir dönüm noktası oldu. N Katmanlı Mimari, Repository Pattern, SOLID Prensipleri ve daha birçok konu hakkında derinlemesine bilgi sahibi oldum. 🎯
