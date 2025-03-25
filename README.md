@@ -68,6 +68,6 @@ Bu proje, backend geliştirme sürecinde büyük bir adım attığım ve birçok
 
 ## 📸 Proje Resimleri
 
-(Proje Görüntüleri Geleck)
+[Homepage](https://github.com/user-attachments/assets/9999c943-5711-48b2-ab60-c17678b0a3e8)
 
 Bu proje, backend geliştirme sürecinde benim için büyük bir dönüm noktası oldu. N Katmanlı Mimari, Repository Pattern, SOLID Prensipleri ve daha birçok konu hakkında derinlemesine bilgi sahibi oldum.
